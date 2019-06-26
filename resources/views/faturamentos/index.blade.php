@@ -24,7 +24,7 @@ Faturamentos
 							<td>{{ $fat->id }}</td>
 							<td>{{ $fat->produto->descricao }}</td>
 							<td>{{ $fat->periodo->dt_inicio }}</td>
-							<td>{{ $fat->valor }}</td>
+							<td>{{ 'R$'.number_format($fat->valor, 2, ',', '.')  }}</td>
 							<td>
 								<a href="{{ route('faturamentos.edit', ['id'=>$fat->id])}}" class="btn-sm btn-sucess">Editar</a>
 								<a href="{{ route('faturamentos.destroy', ['id'=>$fat->id, 'estabelecimento_id'=>$estabelecimento->id])}}" class="btn-sm btn-danger">Excluir</a>

@@ -41,6 +41,13 @@
                     <li><a href="{{ route('produtos')}}">Produtos</a></li>
                 </ul>
             </li>
+			<li class="treeview">
+                <a href="#"><i class='fa fa-link'></i> <span>Relatórios</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('faturamentos.relatorioFull')}}">Faturamentos Completo</a></li>
+					<li><a href="{{ route('faturamentos.relatorioMaioresFaturamentos')}}">Maiores Faturamentos</a></li>
+                </ul>
+            </li>
             <li><a href="{{ route('ofertas')}}"><i class='fa fa-link'></i> <span>Ofertas</span></a></li>
             <li><a href="{{ route('estabelecimentos')}}"><i class='fa fa-link'></i> <span>Estabelecimentos</span></a></li>
         </ul><!-- /.sidebar-menu -->

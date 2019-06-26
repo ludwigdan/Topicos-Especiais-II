@@ -77,6 +77,8 @@ Route::group(['prefix'=>'faturamentos', 'where'=>['id'=>'[0-9]+']], function(){
 	Route::get('{id}/edit',		['as'=>'faturamentos.edit', 'uses'=>'FaturamentoController@edit']);
 	Route::put('{id}/update',		['as'=>'faturamentos.update', 'uses'=>'FaturamentoController@update']);
 	Route::post('store',		['as'=>'faturamentos.store', 'uses'=>'FaturamentoController@store']);
+	Route::get('relatorioFull', ['as'=>'faturamentos.relatorioFull', 'uses'=>'FaturamentoController@geraRelatorioFull']);
+	Route::get('relatorioMaioresFaturamentos', ['as'=>'faturamentos.relatorioMaioresFaturamentos', 'uses'=>'FaturamentoController@geraRelatorioMaioresFaturamentos']);
 
 });
 
